@@ -50,8 +50,10 @@ def data_postprocess(part,original_data_path = r'Data/Original_data'):
         sss = sitk.ReadImage(os.path.join(os.getcwd(),original_data_path,files,'P2.nii.gz'))
         ss = util.resize_image_itk(s, sss)
         if part == 'Tumor':
+            util.mkdir(os.path.join(os.getcwd(),r'Results/Tumor'))
             sitk.WriteImage(ss,os.path.join(os.getcwd(),r'Results/Tumor',files+'.nii.gz'))
         else:
+            util.mkdir(os.path.join(os.getcwd(), r'Results/Breast'))
             sitk.WriteImage(ss, os.path.join(os.getcwd(),r'Results/Breast', files + '.nii.gz'))
 
 
@@ -72,7 +74,7 @@ def test_all(model_name='best_model.pth'):
                  'stride_s': 16, 'stride_h': 48, 'stride_w': 48}
     datasets = Test_all_Datasets(os.path.join(os.getcwd(),r'Data/Sampled_data'), cut_param)
 
-    for img_dataset,TS_all, original_shape, new_shape,itkimage,file_idx,mask in datasets:
+    for img_dataset,TS_all, original_shape, new_shape,itkimage,file_idx in datasets:
         save_tool = Recompone_tool(original_shape, new_shape, cut_param)
         dataloader = DataLoader(img_dataset, batch_size=16, num_workers=1, shuffle=False)
 
@@ -88,11 +90,12 @@ def test_all(model_name='best_model.pth'):
 
         pred = save_tool.recompone_overlap()
 
-        recon = (pred.numpy()>0.5).astype(np.uint16)*(mask.astype(np.uint16))
-        recon[-5:,:,:]=0
-        recon[:5,:,:]=0
+        recon = (pred.numpy()>0.5).astype(np.uint16)#*(mask.astype(np.uint16))
+        #recon[-5:,:,:]=0
+        #recon[:5,:,:]=0
 
         Pred = sitk.GetImageFromArray(recon)
+        util.mkdir(os.path.join(os.getcwd(),r'Results/Tumor_sampled'))
         sitk.WriteImage(Pred,os.path.join(os.path.join(os.getcwd(),r'Results/Tumor_sampled'), file_idx+'.nii.gz'))
         del pred,recon,Pred,save_tool,gt
         gc.collect()
@@ -103,4 +106,4 @@ if __name__ == '__main__':
     data_preprocess()
     test_all('best_model.pth')
     #data_postprocess('Breast')
-    data_postprocess('Tumor')                
+    data_postprocess('Tumor')       
