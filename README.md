@@ -95,7 +95,8 @@ python test.py
 cd ./Inference-code
 python test.py
 ```
-* We release the well-trained model and five samples to guide usage. The data can only be used for academic research usage.
+* We release the well-trained model (Can be downloaded from, due to the memory limitation in Github) and five samples to guide usage. Please put the download 'Trained_model' folder in ./Inference-code/.
+* The data can only be used for academic research usage.
 * For more data requirement, please contact author with zhangjd1@shanghaitech.edu.cn.
 
 
