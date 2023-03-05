@@ -333,8 +333,8 @@ def Test_all_Datasets(dataset_path,size):
         original_shape = x0.shape
         new_shape = cal_newshape(x0,size)
         TS_all = np.array([t0, t1, t2, t3, t4, t5]).astype(np.float32)
-        Breast_mask = load(os.path.join(os.getcwd(),r'Results/Breast_sampled',file+'.nii.gz'))
+        #Breast_mask = load(os.path.join(os.getcwd(),r'Results/Breast_sampled',file+'.nii.gz'))
 
 
-        yield Img_DataSet(x0,x1,x2,x3,x4,x5,x0,size),TS_all,original_shape, new_shape,itkimage,file,Breast_mask
+        yield Img_DataSet(x0,x1,x2,x3,x4,x5,x0,size),TS_all,original_shape, new_shape,itkimage,file
             
