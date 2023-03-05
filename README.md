@@ -96,6 +96,7 @@ cd ./Inference-code
 python test.py
 ```
 * We release the well-trained model and five samples to guide usage. The data can only be used for academic research usage.
+* For more data requirement, please contact author with zhangjd1@shanghaitech.edu.cn.
 
 
 
