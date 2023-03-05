@@ -56,5 +56,37 @@ pip install -r requirements.txt
 └─Ruijin_gt
 ...
 ```
+* The format of the train.txt / test.txt is as follow：
+```
+./data/train.txt
+├─'Guangdong_1'
+├─'Guangdong_2'
+├─'Guangdong_3'
+...
+├─'Yunzhong_100'
+├─'Yunzhong_101'
+...
+├─'Ruijin_1010'
+...
+```
+* For inference on own data, user should put the new data in this format:
+```
+./Inference-code./Data./Original_data
+├─name1
+      ├─P0.nii.gz
+      ├─P1.nii.gz
+      ...
+      └─P5.nii.gz
+├─name2
+├─name3
+...
+```
+
+
+
+
+
+
+
 
 
