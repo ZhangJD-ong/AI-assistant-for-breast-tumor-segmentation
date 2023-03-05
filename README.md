@@ -17,20 +17,44 @@ This project includes both train/test code for training models on uses' own data
 ### Installation
 Clone and repo and install required packages:
 ```
-git clone 
+git clone git@github.com:ZhangJD-ong/AI-assistant-for-breast-tumor-segmentation.git
 pip install -r requirements.txt
 ```
+### Dataset
+* For training the segmentation models, you need to put the data in this format：
 
-
-
+```
 ./data
-└─GDPH&SYSUCC
-      ├─label.csv
-      └─img
-          ├─benign(0).png
-          ├─benign(1).png
-          ├─benign(2).png
-          ├─malignant(0).png
-          ├─malignant(1).png
-          ...
+├─train.txt
+├─test.txt
+├─Guangdong
+      ├─Guangdong_1
+          ├─P0.nii.gz
+          ├─P1.nii.gz
+          ├─P2.nii.gz
+          ├─P3.nii.gz
+          ├─P4.nii.gz     
+          └─P5.nii.gz
+      ├─Guangdong_2
+      ├─Guangdong_3
+      ...
+├─Guangdong_breast
+      ├─Guangdong_1.nii.gz
+      ├─Guangdong_2.nii.gz
+      ├─Guangdong_2.nii.gz
+      ...
+├─Guangdong_gt
+      ├─Guangdong_1.nii.gz
+      ├─Guangdong_2.nii.gz
+      ├─Guangdong_2.nii.gz
+      ...         
+└─Yunzhong
+└─Yunzhong_breast
+└─Yunzhong_gt
+└─Ruijin
+└─Ruijin_breast
+└─Ruijin_gt
+...
+```
+
 
