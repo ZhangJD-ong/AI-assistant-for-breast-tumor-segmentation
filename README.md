@@ -90,12 +90,12 @@ python train.py
 python test.py
 ```
 ### Inference on own data
-* Please put the new data in the fold: ./Inference-code/Data/Original_data. The segmentation results can be find in ./Inference-code/Data/Original_data.
+* Please put the new data in the fold: ./Inference-code/Data/Original_data. The segmentation results can be find in ./Inference-code/Results/Tumor/.
 ```
 cd ./Inference-code
 python test.py
 ```
-
+* We release the well-trained model and five samples to guide usage. The data can only be used for academic research usage.
 
 
 
