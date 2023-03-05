@@ -82,6 +82,13 @@ pip install -r requirements.txt
 ...
 ```
 
+### Training and testing
+* For training the segmentation model, please add data path and adjust model parameters in the file: . 
+```
+cd 
+python train.py
+python test.py
+```
 
 
 
