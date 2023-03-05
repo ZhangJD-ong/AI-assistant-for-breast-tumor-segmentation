@@ -71,7 +71,7 @@ pip install -r requirements.txt
 ```
 * For inference on own data, user should put the new data in this format:
 ```
-./Inference-code./Data./Original_data
+./Inference-code/Data/Original_data
 ├─name1
       ├─P0.nii.gz
       ├─P1.nii.gz
@@ -83,13 +83,18 @@ pip install -r requirements.txt
 ```
 
 ### Training and testing
-* For training the segmentation model, please add data path and adjust model parameters in the file: . 
+* For training the segmentation model, please add data path and adjust model parameters in the file: ./Train-and-test-code/options/BasicOptions.py. 
 ```
-cd 
+cd ./Train-and-test-code
 python train.py
 python test.py
 ```
-
+### Inference on own data
+* Please put the new data in the fold: ./Inference-code/Data/Original_data. The segmentation results can be find in ./Inference-code/Data/Original_data.
+```
+cd ./Inference-code
+python test.py
+```
 
 
 
