@@ -18,7 +18,7 @@ This project includes both train/test code for training models on uses' own data
 Clone and repo and install required packages:
 ```
 git clone git@github.com:ZhangJD-ong/AI-assistant-for-breast-tumor-segmentation.git
-pip install -r requirements.txt
+pip install -r requirement.txt
 ```
 ### Dataset
 * For training the segmentation models, you need to put the data in this format：
