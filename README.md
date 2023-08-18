@@ -102,7 +102,10 @@ python test.py
 * We release the well-trained model (Can be downloaded from https://drive.google.com/drive/folders/1Sos8NK4zzkT1L96saffsg4EpUyjwRSjm?usp=sharing , due to the memory limitation in Github) and five samples to guide usage. Please put the download 'Trained_model' folder in ./Inference-code/.
 * The data can only be used for academic research usage.
 * More data are available at https://doi.org/10.5281/zenodo.8068383.
-
+* IIf you find the project useful, please consider citing it using the following format:
+```
+Zhang et al., A robust and efficient AI assistant for breast tumor segmentation from DCE-MRI via a spatial-temporal framework, Patterns (2023), https://doi.org/10.1016/j.patter.2023.100826
+``` 
 
 
 
