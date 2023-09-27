@@ -106,7 +106,9 @@ python test.py
 ## Citation
 
 * If you find the code or data useful, please consider citing it using the following format:
+```
 Zhang et al., A robust and efficient AI assistant for breast tumor segmentation from DCE-MRI via a spatial-temporal framework, Patterns (2023), https://doi.org/10.1016/j.patter.2023.100826
+```
 
 
 
