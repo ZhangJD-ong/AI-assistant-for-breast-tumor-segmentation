@@ -3,10 +3,11 @@
 ## Paper:
 Please see: A robust and efficient AI assistant for breast tumor segmentation from DCE-MRI via a spatial-temporal framework
 https://www.cell.com/patterns/fulltext/S2666-3899(23)00195-2
+![image](https://github.com/ZhangJD-ong/AI-assistant-for-breast-tumor-segmentation/blob/main/Img/Framework.png)
 
 ## Introduction:
 This project includes both train/test code for training models on uses' own data or fine-tuning models.
-
+![image](https://github.com/ZhangJD-ong/AI-assistant-for-breast-tumor-segmentation/blob/main/Img/Results.png)
 
 ## Requirements:
 * python 3.10
